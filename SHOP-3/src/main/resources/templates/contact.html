@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="common/header :: common-header"/>
+<body>
+<div th:replace="common/header :: header"/>
+<div class="container">
+<main>
+<form class="contact-form-handler" action="mail.php" method="post">
+<div class="container contact-form">
+    <h1 class="text-center">Formularz kontaktowy</h1>
+    <p class="text-center">Skontaktuj się za pośrednictwem podanych danych, lub skorzystaj z formularza kontaktowego</p>
+	<hr>
+	<div class="row">
+       <div class="col-md-6">
+        <address>Adres firmy</address>
+       	<p>Email:- </p>
+       	<p>Phone:- </p>
+       </div>
+
+       <div class="col-md-6">
+         <div class="form-group">
+         	<label>Imię</label>
+         	<input type="text" class="form-control" name="name">
+         </div>
+         <div class="form-group">
+         	<label>Email</label>
+         	<input type="text" class="form-control" name="email">
+         </div>
+         <div class="form-group">
+         	<label>Temat wiadomości</label>
+         	<input type="text" class="form-control" name="subject">
+         </div>
+         <div class="form-group">
+         	<label>Wiadomość</label>
+         	<textarea  class="form-control" rows="7" name="comment"></textarea>
+         </div>
+         <div class="form-group">
+         	<button class="btn btn-primary btn-block" name="submit">Send</button>
+         </div>
+       </div>
+    </div>
+</div>
+</form>
+</main>
+<div th:replace="common/footer :: footer"/>
+</body>
+</html>
